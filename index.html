@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+
+<script>
+    function bulbon(){
+        document.getElementById("bulb").src = "./img/bulb-on.png";
+        document.getElementById("button-on").className = "btn btn-on-enabled";         
+        document.getElementById("button-off").className = "btn";                            
+    }
+
+    function bulboff(){
+        document.getElementById("bulb").src = "./img/bulb-off.png";                                                                                    
+        document.getElementById("button-off").className = "btn btn-off-enabled";
+        document.getElementById("button-on").className = "btn";
+    }
+
+
+</script>
+
+</head>
+<body>
+<div class="card">
+    <img  src="./img/bulb-off.png" class="bulb-img" id="bulb"/>          <!-- by default bulb is off --> 
+        <div class="btn-container">                                                             <!-- both buttons have same effects so they are in same container-->   
+             <button class="btn btn-on-enabled" id="button-on" onClick="bulbon()">ON</button>                                            <!--because on button is click then bulb is on so onclick  function-->
+             <button class="btn btn-off-enabled" id="button-off" onClick="bulboff()">OFF</button>                                             <!--when we click off button the bulb is off-->      
+        </div>
+ </div>
+</body>
+</html>
